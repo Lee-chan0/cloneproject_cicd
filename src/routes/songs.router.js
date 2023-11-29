@@ -5,7 +5,7 @@ import { songsSchema } from "../validation/joi.js";
 
 const router = express.Router();
 
-// 쥬크박스 노래 등록
+// 쥬크박스 노래 등록!
 router.post(
   "/users/:memberId/songs",
   authMiddleware,
