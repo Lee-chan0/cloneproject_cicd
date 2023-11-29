@@ -72,7 +72,7 @@ router.post("/login", async (req, res, next) => {
         nickname: true,
       },
     });
-    return res.status(200).json({ token: `Bearer ${token}`, data });
+    return res.status(200).json({ token: token, data });
   } catch (error) {
     console.error(error);
   }
