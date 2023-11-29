@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-  res.json({ message: "success" });
+  res.json({ message: "success!" });
 });
 
 app.use("/api", [
