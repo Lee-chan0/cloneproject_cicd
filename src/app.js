@@ -10,7 +10,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 const app = express();
-const PORT = 3001;
+const PORT = 8080;
  
 app.use(cors());
 app.use(express.json());
