@@ -6,4 +6,6 @@ sudo npm install -g yarn
 
 sudo yarn install
 
+pm2 kill
+
 yarn start
