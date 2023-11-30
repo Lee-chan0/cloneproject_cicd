@@ -57,12 +57,12 @@ jobs:
         aws-region: ap-northeast-2
 
     - name: upload to S3
-      run: aws s3 cp --region ap-northeast-2 ./CI.zip s3://my-project-bucket-cicd/deploy/
+      run: aws s3 cp --region ap-northeast-2 ./CI.zip s3://new-bucket-m/deploy/
 
 
     - name: deploy with AWS codeDeploy
       run: aws deploy create-deployment
-        --application-name my-deploy-app
+        --application-name my-new-app
         --deployment-config-name CodeDeployDefault.OneAtATime
-        --deployment-group-name my-deploy-group
-        --s3-location bucket=my-project-bucket-cicd,bundleType=zip,key=deploy/CI.zip
+        --deployment-group-name my-new-group
+        --s3-location bucket=new-bucket-m,bundleType=zip,key=deploy/CI.zip
